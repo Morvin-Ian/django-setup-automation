@@ -53,3 +53,5 @@ url_code="from django.urls import path\nfrom . import views\n\nurlpatterns = [\n
 echo -e "\n$view_code" >> views.py
 
 echo -e "\n$url_code" >> urls.py
+
+cd ..

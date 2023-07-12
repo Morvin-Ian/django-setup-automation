@@ -69,7 +69,7 @@ html_content_to_append=$(cat << EOL
 
         </p>
         <div class="link">
-            <small>Have more ideas on making the automation setup more easier?            
+            <small>Have more ideas on making the automation setup more effecient?            
                  <a href="https://github.com/Morvin-Ian/django-setup-automation" target="_blank">Contribute on GitHub</a>
             </small>
         </div>
@@ -86,7 +86,6 @@ EOL
 
 )
 
-cd ..
 
 mkdir frontend && cd frontend && mkdir templates && mkdir static
 
@@ -96,3 +95,23 @@ mkdir $appName && cd $appName && touch index.html
 
 
 echo "$html_content_to_append" >> index.html 
+
+
+
+GREEN='\033[0;32m'
+BOLD='\033[1m'
+RESET='\033[0m'
+
+statement="Django Installation and setup successful - NOW RUN COMMAND 'python manage.py runserver' "
+
+
+terminal_width=$(tput cols)
+
+num_asterisks=$(( (terminal_width - ${#statement}) / 2 - 1))
+
+printf "%${terminal_width}s\n" | tr ' ' '*'
+
+printf "%${num_asterisks}s${GREEN}${BOLD}%s${RESET}%${num_asterisks}s\n" "" "$statement" ""
+
+printf "%${terminal_width}s\n" | tr ' ' '*'
+

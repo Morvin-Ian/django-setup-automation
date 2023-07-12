@@ -96,6 +96,23 @@ mkdir $appName && cd $appName && touch index.html
 
 echo "$html_content_to_append" >> index.html 
 
+#!/bin/bash
+
+# Directory name
+new_directory="Bash scripts"
+
+# List of files to copy
+files=("01_intro.sh" "02_django-installation.sh" "03_project-setup.sh" "04_settings.sh" "05_frontend.sh")
+
+# Create the new directory
+mkdir "$new_directory"
+
+# Copy the files to the new directory
+for file in "${files[@]}"; do
+    cp "$file" "$new_directory"
+done
+
+
 
 
 GREEN='\033[0;32m'

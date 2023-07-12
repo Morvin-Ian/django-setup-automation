@@ -6,4 +6,4 @@
     2. chmod u+x install.sh
     3. ./install.sh
 
-## Other users ... soon
+## Other users ...  (soon)

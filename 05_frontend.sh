@@ -101,7 +101,7 @@ cd ../../../
 new_directory="bash scripts"
 
 # List of files to copy
-files=("01_intro.sh" "02_django-installation.sh" "03_project-setup.sh" "04_settings.sh" "05_frontend.sh")
+files=("01_intro.sh" "02_django-installation.sh" "03_project-setup.sh" "04_settings.sh" "05_frontend.sh" "install.sh")
 
 # Create the new directory
 mkdir "$new_directory"

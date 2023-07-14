@@ -20,3 +20,13 @@ else
     # Create the Django app
     django-admin startapp "$appName"
 fi
+
+cd ..
+
+old_folder="django-setup-automation"
+new_folder="$projectName"
+
+mv "$old_folder" "$new_folder"
+
+
+cd "$new_folder"

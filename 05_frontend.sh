@@ -1,6 +1,5 @@
 #!/bin/bash
 
-
 html_content_to_append=$(cat << EOL
 <!DOCTYPE html>
 <html>
@@ -110,6 +109,15 @@ mkdir "$new_directory"
 for file in "${files[@]}"; do
     mv "$file" "$new_directory"
 done
+
+
+# #rename the folder to project name
+cd ../../
+
+old_folder="django-setup-automation"
+new_folder="$projectName"
+
+mv "$old_folder" "$new_folder"
 
 
 

@@ -1,11 +1,10 @@
 # django-setup-automation
 
-## Linux Users
+## Linux & MacOs Users
 
     1. git clone https://github.com/Morvin-Ian/django-setup-automation/
     2. ./install.sh
 
-## Other users ...  (soon)
 
 ## Successful Setup screenshot
 

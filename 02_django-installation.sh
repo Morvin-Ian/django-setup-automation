@@ -3,11 +3,16 @@
 # Virtual Environment Setup
 #     #pass
 
-echo "------------ENSURE YOU HAVE PYTHON INSTALLED--------------------"
+echo "------------ENSURE YOU HAVE PYTHON & PIP INSTALLED--------------------"
 
 # Check if Python is installed (python, python2, or python3)
 if ! command -v python &> /dev/null && ! command -v python2 &> /dev/null && ! command -v python3 &> /dev/null; then
     echo "Python is not installed. Exiting..."
+    exit 1
+fi
+
+if ! command -v pip &> /dev/null; then
+    echo "pip is not installed. Please install pip to continue."
     exit 1
 fi
 

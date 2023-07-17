@@ -111,15 +111,6 @@ for file in "${files[@]}"; do
 done
 
 
-# #rename the folder to project name
-cd ../../
-
-old_folder="django-setup-automation"
-new_folder="$projectName"
-
-mv "$old_folder" "$new_folder"
-
-
 
 GREEN='\033[0;32m'
 BOLD='\033[1m'

@@ -4,10 +4,9 @@
 read -p "Project name: " projectName
 read -p "First app name: " appName
 
-if [[ $projectName == *" "* ]]; then
+if [[ $projectName == *" "* || $appName == *" "* ]]; then
     echo "Input should not contain any spaces."
     exit 1
-
 fi
 
 # Check if the project or app name already exists
@@ -33,13 +32,13 @@ else
 fi
 
 
-#rename the folder to project name
-cd ..
+# #rename the folder to project name
+# cd ..
 
-old_folder="django-setup-automation"
-new_folder="$projectName"
+# old_folder="django-setup-automation"
+# new_folder="$projectName"
 
-mv "$old_folder" "$new_folder"
+# mv "$old_folder" "$new_folder"
 
 
-cd "$new_folder"
+# cd

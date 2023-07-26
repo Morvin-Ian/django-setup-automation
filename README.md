@@ -1,9 +1,13 @@
 # django-setup-automation
 
-## Linux & MacOs Users
+### Linux & MacOs Users
 
     1. git clone https://github.com/Morvin-Ian/django-setup-automation/
     2. ./install.sh
+
+
+### Windows Users
+https://softwarekeep.com/help-center/how-to-run-shell-script-file-in-windows
 
 
 ## Successful Setup screenshot

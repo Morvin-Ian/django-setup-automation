@@ -1,7 +1,7 @@
 # django-setup-automation
 
 ### Windows Users
-https://softwarekeep.com/help-center/how-to-run-shell-script-file-in-windows
+[Running Bash Script Files](https://softwarekeep.com/help-center/how-to-run-shell-script-file-in-windows)
 
 ### Linux & MacOs Users
 

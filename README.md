@@ -6,6 +6,7 @@
 ### Linux & MacOs Users
 
     1. git clone https://github.com/Morvin-Ian/django-setup-automation/
+    3. Create a virtual environent for the project first
     2. ./install.sh
 
 

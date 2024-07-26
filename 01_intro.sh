@@ -17,3 +17,12 @@ printf "%${num_asterisks}s${GREEN}${BOLD}%s${RESET}%${num_asterisks}s\n" "" "$st
 
 printf "%${terminal_width}s\n" | tr ' ' '*'
 
+# Delete the .git directory if it exists
+if [ -d ".git" ]; then
+    echo "Deleting existing .git directory..."
+    rm -rf .git
+    echo ".git directory deleted."
+else
+    echo "No .git directory found."
+fi
+

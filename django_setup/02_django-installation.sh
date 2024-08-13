@@ -1,5 +1,7 @@
 #!/bin/bash
 
+# Virtual Environment Setup
+#     #pass
 
 echo "------------ENSURE YOU HAVE PYTHON & PIP INSTALLED--------------------"
 
@@ -14,20 +16,10 @@ if ! command -v pip &> /dev/null; then
     exit 1
 fi
 
-# Create a virtual environment
-echo "Creating a virtual environment..."
-python3 -m venv venv
-
-# Activate the virtual environment
-echo "Activating the virtual environment..."
-source venv/bin/activate
-
-# Check if Django is already installed in the virtual environment
+# Check if Django is already installed
 if pip show django >/dev/null 2>&1; then
-    echo "Django is already installed in the virtual environment."
+    echo "Django is already installed."
 else
-    echo "Django is not installed. Installing in the virtual environment..."
+    echo "Django is not installed. Installing..."
     pip install django
 fi
-
-echo "Setup completed successfully."

@@ -1,9 +1,0 @@
-LICENSE.txt
-README.md
-setup.py
-django_setup/__init__.py
-django_setup/run.py
-django_setup.egg-info/PKG-INFO
-django_setup.egg-info/SOURCES.txt
-django_setup.egg-info/dependency_links.txt
-django_setup.egg-info/top_level.txt

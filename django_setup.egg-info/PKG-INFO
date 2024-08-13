@@ -1,0 +1,27 @@
+Metadata-Version: 2.1
+Name: django_setup
+Version: 0.1.0
+Summary: Easy Django Setup
+Home-page: https://github.com/Morvin-Ian/django-setup-automation
+Author: Oluoch Ian
+Author-email: morvinian@gmail.com
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE.txt
+
+# django-setup-automation
+
+### Windows Users
+[Running Bash Script Files](https://softwarekeep.com/help-center/how-to-run-shell-script-file-in-windows)
+
+### Linux & MacOs Users
+
+    1. git clone https://github.com/Morvin-Ian/django-setup-automation/
+    3. Create a virtual environent for the project first
+    2. ./install.sh
+
+
+
+## Successful Setup screenshot
+
+![Screenshot from 2023-07-12 16-55-27](https://github.com/Morvin-Ian/django-setup-automation/assets/78966128/25825a36-59bd-4e98-901e-dcc5e0e56c94)

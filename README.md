@@ -1,13 +1,21 @@
 # django-setup-automation
 
+Automated Django project setup using bash scripts.
+
+> **Note:** This repository is a **template/learning tool**.  
+> It works best when you clone it **outside** any existing project directory — it will create a new Django project in the current folder.
+
 ### Windows Users
 [Running Bash Script Files](https://softwarekeep.com/help-center/how-to-run-shell-script-file-in-windows)
 
-### Linux & MacOs Users
+### Linux & macOS Users
 
-    1. git clone https://github.com/Morvin-Ian/django-setup-automation/
-    3. Create a virtual environent for the project first
-    2. ./install.sh
+1. git clone https://github.com/Morvin-Ian/django-setup-automation/
+2. cd django-setup-automation
+3. chmod +x install.sh
+4. ./install.sh
+
+The script will automatically create and use a Python virtual environment (`venv/`) for you.
 
 
 

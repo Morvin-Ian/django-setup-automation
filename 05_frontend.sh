@@ -86,31 +86,10 @@ EOL
 )
 
 
-mkdir frontend && cd frontend && mkdir templates && mkdir static
+# Create frontend directory structure
+mkdir -p "frontend/templates/$appName" "frontend/static"
 
-cd templates
-
-mkdir $appName && cd $appName && touch index.html 
-
-
-echo "$html_content_to_append" >> index.html 
-
-cd ../../../
-
-new_directory="bash scripts"
-
-# List of files to copy
-files=("01_intro.sh" "02_django-installation.sh" "03_project-setup.sh" "04_settings.sh" "05_frontend.sh" "install.sh")
-
-# Create the new directory
-mkdir "$new_directory"
-
-# Copy the files to the new directory
-for file in "${files[@]}"; do
-    mv "$file" "$new_directory"
-done
-
-
+echo "$html_content_to_append" > "frontend/templates/$appName/index.html"
 
 GREEN='\033[0;32m'
 BOLD='\033[1m'

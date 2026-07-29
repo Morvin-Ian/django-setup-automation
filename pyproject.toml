@@ -1,0 +1,35 @@
+[build-system]
+requires = ["setuptools>=68.0"]
+build-backend = "setuptools.backends._legacy:_Backend"
+
+[project]
+name = "dj-scaffold"
+version = "1.0.0"
+description = "Automated Django project scaffolding — interactive CLI to create a Django project with app, settings, and frontend"
+readme = "README.md"
+license = {file = "LICENSE.txt"}
+authors = [
+    {name = "Morvin Ian", email = "olouochian@gmail.com"}
+]
+keywords = ["django", "scaffold", "setup", "automation", "template"]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Environment :: Console",
+    "Topic :: Software Development :: Code Generators",
+    "License :: OSI Approved :: MIT License"
+]
+requires-python = ">=3.8"
+
+[project.urls]
+Homepage = "https://github.com/Morvin-Ian/django-setup-automation"
+Repository = "https://github.com/Morvin-Ian/django-setup-automation"
+
+[project.scripts]
+dj-scaffold = "dj_scaffold.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+include = ["dj_scaffold*"]
+
+[tool.setuptools.package-data]
+dj_scaffold = ["scripts/*.sh"]

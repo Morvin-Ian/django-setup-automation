@@ -1,25 +1,22 @@
 #!/bin/bash
 
-# Virtual Environment Setup
-#     #pass
-
 echo "------------ENSURE YOU HAVE PYTHON & PIP INSTALLED--------------------"
 
-# Check if Python is installed (python, python2, or python3)
-if ! command -v python &> /dev/null && ! command -v python2 &> /dev/null && ! command -v python3 &> /dev/null; then
-    echo "Python is not installed. Exiting..."
+# Check if Python 3 is available
+if ! command -v python3 &> /dev/null; then
+    echo "Python 3 is not installed. Exiting..."
     exit 1
 fi
 
+# Check if pip is available (inside the virtual environment)
 if ! command -v pip &> /dev/null; then
-    echo "pip is not installed. Please install pip to continue."
+    echo "pip is not available inside the virtual environment. Exiting..."
     exit 1
 fi
 
-# Check if Django is already installed
-if pip show django >/dev/null 2>&1; then
-    echo "Django is already installed."
-else
-    echo "Django is not installed. Installing..."
-    pip install django
-fi
+# Install Django inside the virtual environment
+echo "Installing Django..."
+pip install django
+
+# Verify installation
+python3 -c "import django; print(f'Django {django.get_version()} installed successfully.')"

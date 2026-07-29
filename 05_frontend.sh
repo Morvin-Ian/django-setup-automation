@@ -108,3 +108,37 @@ printf "%${num_asterisks}s${GREEN}${BOLD}%s${RESET}%${num_asterisks}s\n" "" "$st
 
 printf "%${terminal_width}s\n" | tr ' ' '*'
 
+# ---------------------------------------------------------------------------
+# Optional cleanup: remove installation files and rename folder to project name
+# ---------------------------------------------------------------------------
+echo ""
+read -p "Remove installation files and rename folder to '${projectName}'? (y/N): " cleanup_answer
+
+if [[ "$cleanup_answer" =~ ^[Yy]$ ]]; then
+    echo "Cleaning up installation files..."
+
+    parent_dir=$(dirname "$PWD")
+    current_dir_name=$(basename "$PWD")
+
+    # Remove installation scripts and documentation
+    rm -f install.sh 01_intro.sh 02_django-installation.sh \
+          03_project-setup.sh 04_settings.sh 05_frontend.sh
+    rm -f README.md LICENSE.txt
+    rm -rf docs/ .git/ .gitignore
+
+    echo "Installation files removed."
+
+    # Rename the folder to the project name (if different)
+    if [ "$current_dir_name" != "$projectName" ]; then
+        cd "$parent_dir"
+        mv "$current_dir_name" "$projectName"
+        cd "$projectName"
+        echo "Folder renamed to '$projectName'."
+        echo "Your project is now at: $parent_dir/$projectName"
+    else
+        echo "Folder already named '$projectName'."
+    fi
+
+    echo "Cleanup complete!"
+fi
+
